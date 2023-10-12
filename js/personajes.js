@@ -30,5 +30,5 @@ const personajes =[
     quanty:1,
     img:"../assets/img/jpgato.png",
 
-}    
+} 
 ]

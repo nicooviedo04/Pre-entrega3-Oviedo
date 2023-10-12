@@ -1,4 +1,5 @@
 const shopContent = document.getElementById('shopContent');
+const cart = []
 
 personajes.forEach((personaje) => {
     const content = document.createElement('div');
@@ -14,5 +15,20 @@ personajes.forEach((personaje) => {
     const buybutton = document.createElement("button")
     buybutton.innerText = "Comprar"
 
+
     content.append(buybutton)
+
+    buybutton.addEventListener("click",()=>{
+        cart.push({
+
+        id: personaje.id,
+        characterName: personaje.characterName,
+        price: personaje.price,
+        quanty: personaje.quanty,
+        img: personaje.img,
+
+        })
+
+        console.log(cart)
+    })
 });
