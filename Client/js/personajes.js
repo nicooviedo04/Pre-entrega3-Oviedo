@@ -4,7 +4,7 @@ const personajes =[
     characterName:"Barbaro",
     price:2,
     quanty:1,
-    img:"../assets/img/barbaro.png",
+    img:"./assets/img/barbaro.png",
 
 },
 {
@@ -12,7 +12,7 @@ const personajes =[
     characterName:"Caballero",
     price:5,
     quanty:1,
-    img:"../assets/img/caballero.png",
+    img:"./assets/img/caballero.png",
 
 },
 {
@@ -20,7 +20,7 @@ const personajes =[
     characterName:"Mago",
     price:10,
     quanty:1,
-    img:"../assets/img/mago.png",
+    img:"./assets/img/mago.png",
 
 },  
 {
@@ -28,7 +28,7 @@ const personajes =[
     characterName:"Jp Gato",
     price:1000,
     quanty:1,
-    img:"../assets/img/jpgato.png",
+    img:"./assets/img/jpgato.png",
 
 } 
 ]
