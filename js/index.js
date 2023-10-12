@@ -39,7 +39,6 @@ personajes.forEach((personaje) => {
                 
             })
         }
-
-        console.log(cart)
+        displayCartCounter()
     })
 })
