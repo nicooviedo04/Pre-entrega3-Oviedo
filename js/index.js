@@ -1,8 +1,8 @@
-const shopContent = document.getElementById('shopContent');
+const shopContent = document.getElementById('shopContent')
 const cart = []
 
 personajes.forEach((personaje) => {
-    const content = document.createElement('div');
+    const content = document.createElement('div')
     content.className = "card";
     content.innerHTML = `
         <img src="${personaje.img}">
@@ -19,16 +19,27 @@ personajes.forEach((personaje) => {
     content.append(buybutton)
 
     buybutton.addEventListener("click",()=>{
-        cart.push({
 
-        id: personaje.id,
-        characterName: personaje.characterName,
-        price: personaje.price,
-        quanty: personaje.quanty,
-        img: personaje.img,
+        const repeat = cart.some((repeatpersonaje)=> repeatpersonaje.id === personaje.id)
 
-        })
+        if(repeat){
+            cart.map((pers)=>{
+                if (pers.id === personaje.id ){
+                    pers.quanty++
+            }})
+            
+        }else{
+            cart.push({
+                
+                id: personaje.id,
+                characterName: personaje.characterName,
+                price: personaje.price,
+                quanty: personaje.quanty,
+                img: personaje.img,
+                
+            })
+        }
 
         console.log(cart)
     })
-});
+})

@@ -6,7 +6,7 @@ const displayCart = () => {
     modalContainer.innerHTML = ""
     modalContainer.style.display="block";
     modalOverlay.style.display="block";
-    //Header
+    //MHeader
     const modalHeader = document.createElement('div')
 
     const modalClose = document.createElement('div')
@@ -26,7 +26,7 @@ const displayCart = () => {
 
     modalContainer.append(modalHeader)
 
-    //Body
+    //MBody
     cart.forEach((personaje)=>{
         const modalBody = document.createElement('div')
         modalBody.className ="modal-body"
@@ -37,19 +37,58 @@ const displayCart = () => {
                 <h4> ${personaje.characterName}</h4>
             </div>
         <div class="quantity">
-        <span class="quantity-btn-decrease">-</span>
+        <span class="quantity-btn-decrease">➖</span>
         <span class="quantity-input"> ${personaje.quanty}</span>
-        <span class="quantity-btn-increase">+</span>
+        <span class="quantity-btn-increase">➕</span>
         </div>
         <div class="price"> ${personaje.price * personaje.quanty} $</div>
         <div class="delete-personaje">❌</div>
         </div>`
 
         modalContainer.append(modalBody)
+        // boton de restar
+        const decrease = modalBody.querySelector(".quantity-btn-decrease")
+        decrease.addEventListener ('click', () =>{
+            if (personaje.quanty !== 1){
+            personaje.quanty--
+            displayCart()
+        }})
+        // boton de sumar
+        const increase = modalBody.querySelector(".quantity-btn-increase")
+        increase.addEventListener ('click', () =>{
+            
+            personaje.quanty++
+            displayCart()
+        })
+        
+        // boton de eliminar del carrito
+        const deletePersonajeBtn = modalBody.querySelector('.delete-personaje');
+        deletePersonajeBtn.addEventListener('click', ()=>{
+            deletePersonaje(personaje.id)
+
+            })
+
+
+
     })
 
+
+    //Mfooter
+    const total = cart.reduce((acc,elem)=> acc + elem.price * elem.quanty, 0)
+
+    const modalFooter = document.createElement('div')
+    modalFooter.className = "modal-footer"
+    modalFooter.innerHTML = ` <div class = "total-price">Total: ${total}$</div>`
     
+    modalContainer.append(modalFooter)
 }
 
 
 cartBtn.addEventListener("click", displayCart) 
+
+const deletePersonaje =(id) =>{
+    const foundId = cart.findIndex((element)=> element.id === id)
+    console.log(foundId)
+    cart.splice(foundId ,1 )
+    displayCart()
+}
