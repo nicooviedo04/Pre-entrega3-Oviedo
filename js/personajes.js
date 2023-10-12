@@ -1,26 +1,34 @@
 const personajes =[
 {
     id:"1",
-    characterName:"personaje 1",
-    price:100,
+    characterName:"Barbaro",
+    price:2,
     quanty:1,
-    img:"../assets/gato.jpg",
+    img:"../assets/img/barbaro.png",
 
 },
 {
     id:"2",
-    characterName:"personaje 2",
-    price:100,
+    characterName:"Caballero",
+    price:5,
     quanty:1,
-    img:"../assets/rojo.jpg",
+    img:"../assets/img/caballero.png",
 
 },
 {
     id:"3",
-    characterName:"personaje 3",
-    price:100,
+    characterName:"Mago",
+    price:10,
     quanty:1,
-    img:"../assets/perro.jpg",
+    img:"../assets/img/mago.png",
+
+},  
+{
+    id:"4",
+    characterName:"Jp Gato",
+    price:1000,
+    quanty:1,
+    img:"../assets/img/jpgato.png",
 
 }    
 ]

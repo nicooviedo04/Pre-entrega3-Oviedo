@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto:wght@300&display=swap');
+
+
+.card-products-container{
+    margin: 5vh auto;
+
+}
+
+.card-products{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.card-products h2{
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 35px;
+    color: black;
+
+}
+
+.card-products img{
+    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+
+}
+.card-products button{
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color:white;
+    background-color: rgb(57, 23, 88);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    transition: 0.3s;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.card-products button:hover{
+    transform: scale(1.2);
+}
+
+.price{
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+
+}
