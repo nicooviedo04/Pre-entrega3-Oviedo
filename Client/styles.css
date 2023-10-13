@@ -84,6 +84,30 @@
     font-size: 15px;
 }
 
+.btn-primary{
+    background-color:rgb(57, 23, 88);
+    border-color: rgb(57, 23, 88);
+    color: #ffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3 ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    background-color:rgb(57, 23, 88);
+    border-color: rgb(57, 23, 88);
+}
+
+#button-checkout{
+    z-index: 10;
+}
+
+
+
+
 /* Modal */
 
 .modal-overlay{

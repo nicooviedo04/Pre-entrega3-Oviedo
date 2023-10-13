@@ -81,8 +81,64 @@ const displayCart = () => {
     const total = cart.reduce((acc,elem)=> acc + elem.price * elem.quanty, 0)
     const modalFooter = document.createElement('div')
     modalFooter.className = "modal-footer"
-    modalFooter.innerHTML = ` <div class = "total-price">Total: ${total}$</div>`
+    modalFooter.innerHTML = ` <div class = "total-price">Total: ${total}$</div>
+    <button class = "btn-primary" id="checkout-btn" Pagar </button>
+    <div id = "button-checkout"></div>
+
+    `
     modalContainer.append(modalFooter)
+    
+    //MERCADO PAGO
+    const mercadopago = new MercadoPago("public_key",{
+        locale: "es-Ar", 
+    })
+
+    const checkoutButton = modalFooter.querySelector("#checkout-btn")
+    
+    checkoutButton.addEventListener("click", function(){
+        checkoutButton.remove()
+
+        const orderData = {
+            quantity: 1,
+            description: "compra de personaje",
+            price: total,
+        }
+
+        fetch("http://localhost:8080/create_preference",{
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json",
+            },
+            body: JSON.stringify(orderData),
+        })
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(preference){
+            createCheckoutButton(preference.id)
+        })
+        .catch(function (){
+            alert("Unexpected error")
+        })    
+    })
+
+    function createCheckoutButton(preferenceId){
+        const bricksBuilder = mercadopago.bricks()
+
+        const renderComponent = async (bricksBuilder) =>{
+
+            await bricksBuilder.create(
+                "wallet",
+                "button-checkout",
+                {
+                    initialization:{
+                        preferenceId: preferenceId,
+                    },
+                    callbacks: {
+                        onError: (onerror) => console.error(error),
+                        onReady: ()=>{},
+                    }})}}
+
 
 }else{
     const modalText = document.createElement ('h2')
