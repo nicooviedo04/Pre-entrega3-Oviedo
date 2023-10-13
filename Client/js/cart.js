@@ -83,11 +83,9 @@ const displayCart = () => {
     modalFooter.className = "modal-footer"
     modalFooter.innerHTML = ` <div class = "total-price">Total: ${total}$</div>
     <button class = "btn-primary" id="checkout-btn"> Pagar </button>
-    <div id="button-checkout"></div>
-
-    `
+    <div id = "button-checkout"></div>`
     modalContainer.append(modalFooter)
-    
+
     //MERCADO PAGO
     const mercadopago = new MercadoPago("TEST-73515c78-5517-4ace-b703-0557ddf221b5", {
         locale: "es-AR", 
