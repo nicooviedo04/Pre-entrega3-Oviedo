@@ -4,9 +4,9 @@ const cors = require("cors");
 const mercadopago = require("mercadopago");
 const path = require("path");
 
-// Configura MercadoPago con tu ACCESS_TOKEN
+
 mercadopago.configure({
-  access_token: "TU_ACCESS_TOKEN_AQUI", // Reemplaza con tu propio token
+access_token: "TEST-7147098396967183-101318-ab13f1cb9611f0c4fd293a90c0a5e021-299871763",
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -15,7 +15,6 @@ app.use(express.static(path.join(__dirname, "../client")));
 app.use(cors());
 
 app.get("/", function () {
-	// Send the HTML file to the client
 	res.sendFile(path.resolve(__dirname, "../client", "index.html"));
 });
 
