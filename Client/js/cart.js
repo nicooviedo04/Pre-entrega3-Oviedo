@@ -98,7 +98,7 @@ const displayCart = () => {
 
         const orderData = {
             quantity: 1,
-            descripcion: "Compra de personaje",
+            description: "Compra de personaje",
             price: total,
         }
 
