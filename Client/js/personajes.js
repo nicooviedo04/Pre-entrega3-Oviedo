@@ -18,7 +18,7 @@ const personajes =[
 {
     id:"3",
     characterName:"Mago",
-    price:10,
+    price:100,
     quanty:1,
     img:"./assets/img/mago.png",
 

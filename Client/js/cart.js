@@ -87,7 +87,7 @@ const displayCart = () => {
     modalContainer.append(modalFooter)
 
     //MERCADO PAGO
-    const mercadopago = new MercadoPago("TEST-73515c78-5517-4ace-b703-0557ddf221b5", {
+    const mercadopago = new MercadoPago("APP_USR-1457888d-4b7e-4d2c-a609-7098e96210fa", {
         locale: "es-AR", 
     })
 

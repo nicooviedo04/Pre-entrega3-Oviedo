@@ -6,7 +6,7 @@ const path = require("path");
 
 
 mercadopago.configure({
-  access_token: "TEST-7147098396967183-101318-ab13f1cb9611f0c4fd293a90c0a5e021-299871763", // Reemplaza con tu propio token
+  access_token: "APP_USR-7147098396967183-101318-817c1d902e1ee64967d83ffbbfc9e014-299871763", // Reemplaza con tu propio token
 });
 
 app.use(express.urlencoded({ extended: false }));
