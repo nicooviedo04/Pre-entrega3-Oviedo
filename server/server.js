@@ -1,12 +1,12 @@
 const express = require("express");
-const app = express();
-const cors = require("cors");
-const mercadopago = require("mercadopago");
-const path = require("path");
+const app = express()
+const cors = require("cors")
+const mercadopago = require("mercadopago")
+const path = require("path")
 
 
 mercadopago.configure({
-  access_token: "APP_USR-7147098396967183-101318-817c1d902e1ee64967d83ffbbfc9e014-299871763", // Reemplaza con tu propio token
+	access_token: "APP_USR-7147098396967183-101318-817c1d902e1ee64967d83ffbbfc9e014-299871763", 
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -15,8 +15,8 @@ app.use(express.static(path.join(__dirname, "../client")));
 app.use(cors());
 
 app.get("/", function () {
-	res.sendFile(path.resolve(__dirname, "../client", "index.html"));
-});
+	res.sendFile(path.resolve(__dirname, "../client", "index.html"))
+})
 
 app.post("/create_preference", (req, res) => {
 	let preference = {
@@ -55,10 +55,10 @@ app.get('/feedback', function (req, res) {
 });
 
 app.listen(8080, () => {
-	console.log("The server is now running on Port 8080");
+	console.log("The server is now running on Port 8080")
 });
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
-});
+})
