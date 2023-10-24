@@ -4,7 +4,44 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;  
+    /* border: solid thin red; */
 }
+
+/* barra de navegacion */
+.navbar{
+    background-color: #52257c;
+    position: fixed;
+    top: 0 ;
+    width: 100%;
+}
+
+ul{
+list-style: none;
+display: flex;
+justify-content: end;
+gap: 15px;
+padding-bottom: 20PX;
+padding-right: 40px;
+}
+
+a{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Productos o Personajes*/
 
 .card-products-container{
     margin: 5vh auto;
@@ -63,8 +100,8 @@
     background-color: rgb(25, 25, 25);
     padding: 10px;
     border-radius: 50%;
-    height: 24px;
-    width: 24px;
+    height: 45px;
+    width: 45px;
     transition: transform 0.2 ease-in-out;
 }
 
@@ -83,8 +120,8 @@
     background-color: #ed3434;
     padding: 4px;
     border-radius: 50%;
-    height: 17px;
-    width: 17px;
+    height: 25px;
+    width: 25px;
     font-size: 15px;
 }
 
@@ -207,9 +244,15 @@ font-weight: bold;
 }
 
 
-/* Inicio de sesiones */
 
 
+
+
+
+
+
+
+/* Inicio/Registro de sesiones */
 .section-container{
     /* background-color: #c9d6ff; */
     background-color: #52257c;
