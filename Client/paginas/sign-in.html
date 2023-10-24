@@ -9,47 +9,60 @@
     <title>Warriors of Destiny</title>
 </head>
 <body>
-    <section class="InicioS">
-        <div class="container-form">
-            <div class="informacion">
-                <div class="info-c">
-                    <h2>Bienvenido</h2>
-                    <p>Para poder acceder a la plataforma es necesario registrarte.</p>
-                    <input type="button" value="Iniciar Sesión">
+<section class="section-container">
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Registrate</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class='bx bxl-google'></i></a>
+                    <a href="#" class="icon"><i class='bx bxl-github' ></i> </a>
+                    <a href="#" class="icon"><i class='bx bxl-linkedin' ></i> </a>
+                    <a href="#" class="icon"><i class='bx bxl-apple'></i></a>
                 </div>
-            </div>
-            <div class="form-informacion">
-                <div class="form-informacion-c">
-                    <h2>Crear una cuenta</h2>
-                    <div class="icons">
-                        <i class='bx bxl-google'></i>
-                        <i class='bx bxl-github' ></i>
-                        <i class='bx bxl-linkedin' ></i>
-                    </div>
-                    <p>o usa tu email para registrarte</p>
-                    <form action="">
-                        <label for="">
-                            <i class='bx bxs-user' ></i>
-                            <input type="text" placeholder="Nombre completo">
-                        </label>
-                        <label for=""> 
-                            <i class='bx bxs-envelope' ></i>
-                            <input type="email"  placeholder="Email"  name="" id="">
-                        </label>
-                        <label for="">  
-                            <i class='bx bxs-lock-alt' ></i>
-                            <input type="password" placeholder="Contraseña"     name="" id="">
-                        </label>   
-                        <input type="submit" value="Registrarse">
-                    </form>
+                <span>o usa tu email para Registrarte</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Registrarse</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Inicia Sesión</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class='bx bxl-google'></i></a>
+                    <a href="#" class="icon"><i class='bx bxl-github' ></i> </a>
+                    <a href="#" class="icon"><i class='bx bxl-linkedin' ></i> </a>
+                    <a href="#" class="icon"><i class='bx bxl-apple'></i></a>
+                </div>
+                <span>o utiliza tu contraseña de correo electrónico</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¡Bienvenido de nuevo!</h1>
+                    <p>Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
+                    <button class="hidden" id="login">Iniciar Sesion</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Bienvenido</h1>
+                    <p>Regístrese con sus datos personales para utilizar todas las funciones del sitio</p>
+                    <button class="hidden" id="register">Registrarse</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
+</section>
+    
 
-
-
+    <script src="../js/isesion.js"></script>
 </body>
 </html>
