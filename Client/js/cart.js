@@ -116,7 +116,7 @@ const displayCart = () => {
             createCheckoutButton(preference.id)
         })
         .catch(function(){
-            alert("Unexpected error")
+            alert("Usa el npm start en la carpeta del servidor :) ")
         })
     })
 

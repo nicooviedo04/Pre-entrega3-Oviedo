@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto:wght@300&family=Titillium+Web:ital,wght@0,300;0,600;1,400&display=swap');
+
 /* font-family: 'Pixelify Sans', sans-serif; */
 *{
     padding: 0;
@@ -64,10 +66,47 @@ body{
 
 }
 
+.container-aboutus{
+    padding-top: 120px;
+    
+
+}
+
+.titulos{
+    font-size: 48px;
+    padding: 10px 20px;
+}
+
+.text-sobrenosotros{
+    font-family:'Titillium Web';
+    font-weight: 600;
+    text-indent: 10px;
+    text-align: left;
+    width: 35%;
+    padding: 10px 20px;
+
+}
+
+.titulo-nm{
+    font-size: 30px;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+.container-nm{
+    display: flex;
+    justify-content: end;
+}
 
 
-
-
+.text-nuestramision{
+    font-family:'Titillium Web';
+    font-weight: 600;
+    text-indent: 10px;
+    text-align: right;
+    width: 35%;
+    padding: 10px 20px;
+}
 
 
 /* Productos o Personajes*/
