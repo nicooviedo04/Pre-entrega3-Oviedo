@@ -25,7 +25,7 @@ personajes.forEach((personaje) => {
         if(repeat){
             cart.map((pers)=>{
                 if (pers.id === personaje.id ){
-                    pers.quanty++
+                    // pers.quanty++ 
             }})
             
         }else{

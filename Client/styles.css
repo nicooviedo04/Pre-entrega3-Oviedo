@@ -112,13 +112,13 @@ body .options .option {
     --defaultBackground: #ed5565;
 }
 .option:nth-child(2) {
-    --defaultBackground: #fc6e51;
+    --defaultBackground: #5d9cec;
 }
 .option:nth-child(3) {
-    --defaultBackground: #ffce54;
+    --defaultBackground: #2ecc71;
 }
 .option:nth-child(4) {
-    --defaultBackground: #2ecc71;
+    --defaultBackground: #1e623a;
 }
 .option:nth-child(5) {
     --defaultBackground: #5d9cec;

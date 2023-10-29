@@ -62,12 +62,12 @@ const displayCart = () => {
         }})
 
         // boton de sumar
-        const increase = modalBody.querySelector(".quantity-btn-increase")
-        increase.addEventListener ('click', () =>{
-            personaje.quanty++
-            displayCart()
-            displayCartCounter()
-        })
+        // const increase = modalBody.querySelector(".quantity-btn-increase")
+        // increase.addEventListener ('click', () =>{
+        //     personaje.quanty++
+        //     displayCart()
+        //     displayCartCounter()
+        // })
 
         // boton de eliminar del carrito
         const deletePersonajeBtn = modalBody.querySelector('.delete-personaje');
