@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SDK MERCADO PAGO -->
     <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <!-- ESTILOS CON CSS -->
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <title>Warriors of Destiny</title>
 </head>
 <body>
@@ -17,7 +20,7 @@
         <nav class="navbar">
                 <a href="#">Inicio</a>
                 <a href="#">Sobre Nosotros</a>
-                <a href="#">Productos</a>
+                <a href="#shopContent">Productos</a>
                 <a href="./paginas/sign-in.html">Iniciar Sesión</a>
 
         </nav>
@@ -102,6 +105,9 @@
         Fundada en 2023, nuestra empresa se ha convertido en un pionero en la industria de los videojuegos, y desde entonces hemos estado comprometidos con la innovación, 
         la creatividad y la entrega de emocionantes aventuras virtuales.
         </p>
+
+        <div class="personajes3d" id="escena3D"></div>
+
         <h2 class="titulo-nm">Nuestra Mision</h2>
         <div class="container-nm">
             <p class="text-nuestramision">En el corazón de todo lo que hacemos se encuentra una misión clara: 
@@ -162,6 +168,8 @@
     <script src="./js/personajes.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/personajes3d.js"></script>
+    
 </body>
     
 </html>
