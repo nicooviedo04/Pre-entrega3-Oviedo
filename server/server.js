@@ -4,7 +4,7 @@ const cors = require("cors")
 const mercadopago = require("mercadopago")
 const path = require("path")
 
-
+// Mercado pago
 mercadopago.configure({
 	access_token: "APP_USR-7147098396967183-101318-817c1d902e1ee64967d83ffbbfc9e014-299871763", 
 });
@@ -62,3 +62,7 @@ app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
 })
+
+
+
+

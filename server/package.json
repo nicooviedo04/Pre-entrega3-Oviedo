@@ -8,9 +8,11 @@
     "debug": "nodemon --inspect=5005 server.js"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mercadopago": "^1.5.17",
+    "mongoose": "^7.6.4",
     "parcel": "^2.10.1",
     "three": "^0.157.0",
     "vite": "^4.5.0"

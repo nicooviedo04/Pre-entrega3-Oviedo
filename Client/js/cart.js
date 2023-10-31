@@ -116,7 +116,7 @@ const displayCart = () => {
             createCheckoutButton(preference.id)
         })
         .catch(function(){
-            alert("Usa el npm start en la carpeta del servidor :) ")
+            Swal.fire('Usa el npm start en la carpeta del servidor :) ')
         })
     })
 

@@ -1,6 +1,28 @@
 const shopContent = document.getElementById('shopContent')
 const cart = []
+const animatedElement = document.querySelector('.aboutus-sn');
+const animatedElement2 = document.querySelector('.aboutus-nm');
+const animatedElement3 = document.querySelector('.animated-productos');
 
+function checkScroll() {
+    const elementTop = animatedElement.getBoundingClientRect().top;
+    const element2Top = animatedElement2.getBoundingClientRect().top;
+    const element3Top = animatedElement3.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (elementTop < screenHeight * 0.75 && element2Top < screenHeight * 0.75 && element3Top < screenHeight * 0.75)  {
+        animatedElement.classList.add('active');
+        animatedElement2.classList.add('active');
+        animatedElement3.classList.add('active');
+        window.removeEventListener('scroll', checkScroll);
+    }
+
+}
+
+window.addEventListener('scroll', checkScroll);
+
+
+// Compra personajes
 personajes.forEach((personaje) => {
     const content = document.createElement('div')
     content.className = "card";
@@ -47,3 +69,5 @@ $(".option").click(function () {
     $(".option").removeClass("active");
     $(this).addClass("active");
 });
+
+
