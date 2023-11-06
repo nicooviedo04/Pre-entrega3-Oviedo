@@ -24,7 +24,7 @@ const displayCart = () => {
     })
 
     const modalTitle = document.createElement('div')
-    modalTitle.innerText= 'Warriors of Destiny'
+    modalTitle.innerText= 'Warriors of Destiny NFT'
     modalTitle.className= "modal-title"
     modalHeader.append(modalTitle)
     modalContainer.append(modalHeader)
