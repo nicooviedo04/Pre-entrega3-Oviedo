@@ -17,6 +17,7 @@ body{
     
 }
 
+
 /* barra de navegacion */
 .header {
     position: fixed;
@@ -269,8 +270,27 @@ body .options .option {
     padding: 10px 20px;
 }
 
-/* Productos o Personajes*/
 
+
+
+
+/* NFT */
+.titulos-nft{
+    font-size: 48px;
+    padding-top: 20px;
+}
+
+.text-nft{
+    display: block;
+    text-align: center;
+}
+
+.p-nft{
+    padding-top: 15px;
+    font-family:'Titillium Web';
+    font-weight: 600;
+    padding: 10px 20px;
+}
 .card-products-container{
     margin: 5vh auto;
 
