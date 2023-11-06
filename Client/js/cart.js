@@ -42,9 +42,9 @@ const displayCart = () => {
                 <h4> ${personaje.characterName}</h4>
             </div>
         <div class="quantity">
-        <span class="quantity-btn-decrease">➖</span>
+        <span class="quantity-btn-decrease"></span>
         <span class="quantity-input"> ${personaje.quanty}</span>
-        <span class="quantity-btn-increase">➕</span>
+        <span class="quantity-btn-increase"></span>
         </div>
         <div class="price"> ${personaje.price * personaje.quanty} $</div>
         <div class="delete-personaje">❌</div>
@@ -52,23 +52,7 @@ const displayCart = () => {
         
         modalContainer.append(modalBody)
         displayCartCounter()
-        // boton de restar
-        const decrease = modalBody.querySelector(".quantity-btn-decrease")
-        decrease.addEventListener ('click', () =>{
-            if (personaje.quanty !== 1){
-            personaje.quanty--
-            displayCart()
-            displayCartCounter()
-        }})
-
-        // boton de sumar
-        // const increase = modalBody.querySelector(".quantity-btn-increase")
-        // increase.addEventListener ('click', () =>{
-        //     personaje.quanty++
-        //     displayCart()
-        //     displayCartCounter()
-        // })
-
+        
         // boton de eliminar del carrito
         const deletePersonajeBtn = modalBody.querySelector('.delete-personaje');
         deletePersonajeBtn.addEventListener('click', ()=>{
