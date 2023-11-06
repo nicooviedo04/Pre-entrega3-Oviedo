@@ -131,7 +131,7 @@ const displayCart = () => {
 }else{
     const modalText = document.createElement ('h2')
     modalText.className = "modal-body"
-    modalText.textContent= 'No hay ningun producto en el carrito'
+    modalText.textContent= 'No has elegido ningun guerrero'
     modalContainer.append(modalText)
 
 
