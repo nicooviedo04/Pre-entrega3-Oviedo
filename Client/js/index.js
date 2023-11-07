@@ -1,5 +1,5 @@
 const shopContent = document.getElementById('shopContent')
-const cart = []
+const cart = JSON.parse(localStorage.getItem("cart")) || []
 const animatedElement = document.querySelector('.aboutus-sn');
 const animatedElement2 = document.querySelector('.aboutus-nm');
 const animatedElement3 = document.querySelector('.animated-productos');
@@ -44,10 +44,14 @@ personajes.forEach((personaje) => {
 
         const repeat = cart.some((repeatpersonaje)=> repeatpersonaje.id === personaje.id)
 
-        if(repeat){
-            cart.map((pers)=>{
-                if (pers.id === personaje.id ){
-            }})
+        if (repeat) {
+            cart
+            .filter((pers) => pers.id === personaje.id)
+            .forEach((pers) => {
+                Swal.fire(`No puedes tener más de un ${pers.characterName}`)
+                });
+
+
             
         }else{
             cart.push({
@@ -58,11 +62,19 @@ personajes.forEach((personaje) => {
                 quanty: personaje.quanty,
                 img: personaje.img,
                 
-            })
-        }
+            })}
         displayCartCounter()
+        savelocal()
     })
 })
+
+const savelocal =()=>{
+    localStorage.setItem("cart", JSON.stringify(cart))
+
+}
+
+
+
 
 $(".option").click(function () {
     $(".option").removeClass("active");

@@ -57,6 +57,7 @@ const displayCart = () => {
         const deletePersonajeBtn = modalBody.querySelector('.delete-personaje');
         deletePersonajeBtn.addEventListener('click', ()=>{
             deletePersonaje(personaje.id)
+            savelocal()
             displayCartCounter()
             })
     })
@@ -143,17 +144,20 @@ const deletePersonaje =(id) =>{
     console.log(foundId)
     cart.splice(foundId ,1 )
     displayCart()
-    displayCartCounter()
+    
+    
 }
 
 const displayCartCounter=()=>{
     const cartLength = cart.reduce((acc,elem)=> acc + elem.quanty, 0)
+    localStorage.setItem("cartLength", JSON.stringify(cartLength))
     if(cartLength > 0 ){
         cartCounter.style.display = "block";
-        cartCounter.innerText= `${cartLength}`
+        cartCounter.innerText= JSON.parse(localStorage.getItem("cartLength"))
     }else{
         cartCounter.style.display = "none";
-    }
-    
-    
+    } 
 }
+
+displayCartCounter()
+    
